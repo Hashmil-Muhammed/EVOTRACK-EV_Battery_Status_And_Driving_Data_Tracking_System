@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=18181B,09090B,000000&height=180&section=header&text=EVOTRACK&fontSize=60&fontColor=ffffff&animation=twinkling&fontAlignY=32&desc=Premium%20EV%20Dashboard%20&%20Tracker&descAlignY=62&descSize=16" alt="EVOTRACK Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0072FF,00C6FF,4FACFE&height=180&section=header&text=EVOTRACK&fontSize=60&fontColor=ffffff&animation=twinkling&fontAlignY=32&desc=Premium%20EV%20Dashboard%20&%20Tracker&descAlignY=62&descSize=16" alt="EVOTRACK Banner" />
 </p>
 <h1 align="center" style="color: white;">
   EVOTRACK
