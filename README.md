@@ -1,6 +1,11 @@
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0072FF,00C6FF,4FACFE&height=180&section=header&text=EVOTRACK&fontSize=60&fontColor=ffffff&animation=twinkling&fontAlignY=32&desc=Premium%20EV%20Dashboard%20&%20Tracker&descAlignY=62&descSize=16" alt="EVOTRACK Banner" />
 </p>
+
+
+
+
+
 <h1 align="center" style="color: white;">
   EVOTRACK
   <br>
@@ -28,7 +33,8 @@
 <hr />
 
 ### 🎥 Project Working Demo
-https://evotrack.onrender.com/
+[https://evotrack.onrender.com/](https://github.com/user-attachments/assets/b516f469-9e55-4806-a1fb-313209f8dde6
+)
 
 ---
 
