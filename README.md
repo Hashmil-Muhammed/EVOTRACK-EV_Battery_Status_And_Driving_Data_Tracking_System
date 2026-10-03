@@ -1,7 +1,7 @@
-﻿<p align="center">
+<p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=FFD700,FDB931,FDE073&height=180&section=header&text=EVOTRACK&fontSize=60&fontColor=000000&animation=twinkling&fontAlignY=32&desc=Premium%20EV%20Dashboard%20&%20Tracker&descAlignY=62&descSize=16" alt="EVOTRACK Banner" />
 </p>
-<h1 align="center">
+<h1 align="center" style="color: white;">
   EVOTRACK
   <br>
   <img src="https://img.shields.io/badge/EVOTRACK-Premium%20Dashboard-FFD700?style=for-the-badge&logo=tesla&logoColor=black" alt="EVOTRACK" />
