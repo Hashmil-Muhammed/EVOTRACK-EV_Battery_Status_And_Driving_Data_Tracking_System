@@ -1,6 +1,6 @@
 @echo off
 echo =========================================
-echo Starting Car Battery Log Application...
+echo Starting  LogCar Battery Application...
 echo =========================================
 echo.
 echo The application will open at: http://127.0.0.1:8000
