@@ -506,7 +506,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateTotals(filteredLogs = logs) {
         if (filteredLogs.length === 0) {
             document.getElementById('total-distance').textContent = '0 km';
-            document.getElementById('total-range-drop').textContent = '0 km';
             document.getElementById('total-ev-cost').textContent = '₹0.00';
             document.getElementById('total-petrol').textContent = '₹0.00';
             document.getElementById('total-profit').textContent = '₹0.00';
@@ -514,7 +513,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         let sumDistance = 0;
-        let sumRangeDrop = 0;
         let sumEvCost = 0;
         let sumPetrol = 0;
         let sumProfit = 0;
@@ -523,21 +521,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const dist = parseFloat(log.distance_driven) || 0;
             const chargeRange = parseFloat(log.post_charge_range) || 0;
             const remRange = parseFloat(log.remaining_range) || 0;
-
-            const drop = (log.post_charge_range !== null && log.remaining_range !== null) ? (chargeRange - remRange) : 0;
             const evCost = dist; // The user requested to show Distance Driven as cash for EV Cost
             const petrol = (dist / 16) * 114.27;
             const profit = petrol - evCost;
 
             sumDistance += dist;
-            sumRangeDrop += drop;
             sumEvCost += evCost;
             sumPetrol += petrol;
             sumProfit += profit;
         });
 
         document.getElementById('total-distance').textContent = sumDistance.toFixed(1) + ' km';
-        document.getElementById('total-range-drop').textContent = sumRangeDrop.toFixed(1) + ' km';
         document.getElementById('total-ev-cost').textContent = '₹' + sumEvCost.toFixed(2);
         document.getElementById('total-petrol').textContent = '₹' + sumPetrol.toFixed(2);
         document.getElementById('total-profit').textContent = '₹' + sumProfit.toFixed(2);
@@ -572,7 +566,6 @@ document.addEventListener('DOMContentLoaded', () => {
             
             <td class="cell-calc col-calculated">${formatCalculatedDriveStatus(log)}</td>
             <td class="cell-calc col-calculated">${formatCalculatedTotalRange(log)}</td>
-            <td class="cell-calc col-calculated">${formatCalculatedRangeDrop(log)}</td>
             <td class="cell-calc col-calculated">${formatCalculatedEVCost(log)}</td>
             <td class="cell-calc col-calculated">${formatCalculatedPetrolCost(log)}</td>
             <td class="cell-calc col-calculated">${formatCalculatedProfit(log)}</td>
@@ -782,15 +775,6 @@ document.addEventListener('DOMContentLoaded', () => {
         span.className = `badge badge-${val}`;
         span.textContent = val;
         return span;
-    }
-
-    function formatCalculatedRangeDrop(log) {
-        if (log.post_charge_range === null || log.remaining_range === null ||
-            log.post_charge_range === undefined || log.remaining_range === undefined) {
-            return '<span class="empty-cell">-</span>';
-        }
-        const drop = log.post_charge_range - log.remaining_range;
-        return `<span class="value-display calc-value">${drop.toFixed(1)} km</span>`;
     }
 
     function formatCalculatedEVCost(log) {
