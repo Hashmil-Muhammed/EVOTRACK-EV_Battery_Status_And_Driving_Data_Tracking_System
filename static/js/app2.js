@@ -907,7 +907,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const headers = [
             'Date', 'Post-Charge Percentage', 'Post-Charge Avg Energy Cons.', 'Post-Charge Range', 'Post-Charge Mode', 'Post-Charge Level',
             'Post-Drive Mode', 'Post-Drive Level', 'Post-Drive Avg Energy Cons.', 'Remaining Range', 'Distance Driven', 'Remaining Percentage',
-            'Drive Status', 'Range Drop', 'EV Cost (₹)', 'Petrol Savings (₹)', 'Profit (₹)'
+            'Drive Status', 'Total Range (km)', 'Range Drop', 'EV Cost (₹)', 'Petrol Savings (₹)', 'Profit (₹)'
         ];
 
         const csvContent = [
