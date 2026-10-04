@@ -1101,9 +1101,9 @@ th:nth-child(12) {
 }
 
 /* Range Drop */
-th:nth-child(13) {
+/* th:nth-child(13) {
     width: 90px;
-}
+} */
 
 /* EV Cost */
 th:nth-child(14) {
