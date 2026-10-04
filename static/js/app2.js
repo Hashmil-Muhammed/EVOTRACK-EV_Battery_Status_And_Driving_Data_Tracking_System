@@ -821,9 +821,21 @@ document.addEventListener('DOMContentLoaded', () => {
     function formatCalculatedTotalRange(log) {
         const distance = parseFloat(log.distance_driven);
         const remaining = parseFloat(log.remaining_range);
+        const chargeRange = parseFloat(log.post_charge_range);
         if (isNaN(distance) || isNaN(remaining)) return '<span class="empty-cell">-</span>';
+        
         const total = distance + remaining;
-        return total.toFixed(1) + ' km';
+        let colorClass = '';
+        
+        if (!isNaN(chargeRange)) {
+            if (total < chargeRange) {
+                colorClass = 'text-red';
+            } else if (total > chargeRange) {
+                colorClass = 'text-green';
+            }
+        }
+        
+        return `<span class="value-display calc-value ${colorClass}">${total.toFixed(1)} km</span>`;
     }
 
     function formatCalculatedDriveStatus(log) {

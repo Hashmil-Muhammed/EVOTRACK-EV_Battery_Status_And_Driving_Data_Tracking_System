@@ -2421,3 +2421,8 @@ html,
 @media (max-width: 1024px) { .main-content-wrapper .custom-footer { margin: auto -4rem -3rem -4rem; padding: 1.5rem 4rem; } }
 @media (max-width: 768px) { .main-content-wrapper .custom-footer { margin: auto -1.5rem -2rem -1.5rem; padding: 1.5rem; } }
 
+
+.text-red {
+    color: #ef4444;
+    font-weight: 600;
+}
