@@ -571,6 +571,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td class="cell-drive" data-field="remaining_percentage" data-type="number" data-suffix="%">${formatValue(log.remaining_percentage, '%')}</td>
             
             <td class="cell-calc col-calculated">${formatCalculatedDriveStatus(log)}</td>
+            <td class="cell-calc col-calculated">${formatCalculatedTotalRange(log)}</td>
             <td class="cell-calc col-calculated">${formatCalculatedRangeDrop(log)}</td>
             <td class="cell-calc col-calculated">${formatCalculatedEVCost(log)}</td>
             <td class="cell-calc col-calculated">${formatCalculatedPetrolCost(log)}</td>
@@ -815,6 +816,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const petrol = (log.distance_driven / 16) * 114.27;
         const profit = petrol - evCost;
         return `<span class="value-display calc-value text-purple">₹${profit.toFixed(2)}</span>`;
+    }
+
+    function formatCalculatedTotalRange(log) {
+        const distance = parseFloat(log.distance_driven);
+        const remaining = parseFloat(log.remaining_range);
+        if (isNaN(distance) || isNaN(remaining)) return '<span class="empty-cell">-</span>';
+        const total = distance + remaining;
+        return total.toFixed(1) + ' km';
     }
 
     function formatCalculatedDriveStatus(log) {
