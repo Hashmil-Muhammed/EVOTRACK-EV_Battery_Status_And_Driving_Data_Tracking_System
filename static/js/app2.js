@@ -789,7 +789,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return '<span class="empty-cell">-</span>';
         }
         const cost = (log.distance_driven / 16) * 114.27;
-        return `<span class="value-display calc-value text-green">₹${cost.toFixed(2)}</span>`;
+        return `<span class="value-display calc-value">₹${cost.toFixed(2)}</span>`;
     }
 
     function formatCalculatedProfit(log) {
